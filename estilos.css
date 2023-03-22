@@ -1,0 +1,54 @@
+*   {margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+    
+body{
+   background-color:antiquewhite;
+}
+
+.form{
+    width: 400px;
+    padding: 50px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(95, 95, 126);
+}
+.form h4{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.campo{
+    width: 100%;
+    padding: 10px;
+    margin: 10px;  
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: azure;
+}
+.buton{
+    width: 100%;
+    padding: 12px;
+    margin: 10px;  
+    border: none;
+    margin-bottom: 10px;
+    color: white;
+    background: rgb(179, 179, 236);
+}
+
+.form p{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.form a{
+    color: white;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
