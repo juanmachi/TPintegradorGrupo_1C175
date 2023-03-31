@@ -55,8 +55,12 @@
 
 .fondo{
     padding-top: 1%;
-    background-image: url(/images/muro-hormigon-gris.avif);
+    background-image: url(/images/);
 }
 footer{
     background-color: rgb(70, 70, 173);
+}
+
+@media (max-width: 700px) {
+    footer{background-color: red;}
 }
