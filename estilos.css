@@ -66,4 +66,27 @@ footer{
     border-radius: 200px;
     box-shadow: 5px 5px 20px;
 }
+.contain{
+    border: 3px solid rgb(55, 0, 255);
+    height: 150px;
+    width: 250px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 0px;
+    background-color: black;
+    margin-left: 30px;
+    color: white;
+  }
 
+  #letra{
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+#bot2{
+    color: white;
+    background-color: blue;
+    align-self: center;
+}
+#city{
+    align-self:baseline;
+}
