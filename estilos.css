@@ -3,8 +3,13 @@
     box-sizing: border-box;    
 }
 footer{
-    background-color: rgb(214, 214, 214);
+    margin-top: 10px;
+    padding: 20px;
+    color: aliceblue;
+    background-color: rgb(63, 56, 56);
 }
+
+/* Formulario */
 .form{
     width: 400px;
     padding: 50px;
@@ -51,13 +56,15 @@ footer{
 .form a:hover{
     text-decoration: underline;
 }
+/* ///////////////////////////////////////////// */
 
 .fondo{
     padding-top: 1%;
     background-image: url(images/fondo.jpg);
+    /* background-repeat:no-repeat; */
 }
 
-
+/* al achicar cambie de color el footer */
 /* @media (max-width: 700px) {
     footer{background-color: red;}
 } */
