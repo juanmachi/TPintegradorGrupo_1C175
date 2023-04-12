@@ -1,3 +1,20 @@
+function resetform() {
+  //Limpia los campos 
+  $("form input[type=email]").each(function() { this.value = '' });
+  $("form input[type=text] , form textarea ").each(function() { this.value = '' });
+}
+function enfocar()
+{ 
+//Coloca el cursor en los input
+const $btnEnfocar = document.querySelector("#btnEnfocar"),
+$nombre = document.querySelector("#nombre");
+
+// En el click, enfocar
+$btnEnfocar.addEventListener("click", () => {
+$nombre.focus();
+});
+
+}
 function imprimir() {
     var nombre = document.getElementById("nombre").value;
     var email = document.getElementById("email").value;
@@ -10,24 +27,25 @@ function imprimir() {
     enfocar();
 }
    
-    function resetform() {
-        //Limpia los campos 
-        $("form input[type=email]").each(function() { this.value = '' });
-        $("form input[type=text] , form textarea ").each(function() { this.value = '' });
-   }
-   function enfocar()
-   { 
-    //Coloca el cursor en los input
-    const $btnEnfocar = document.querySelector("#btnEnfocar"),
-	$nombre = document.querySelector("#nombre");
+   
+//api de clima
+function resetinp() {
+  //Limpia los campos 
+ 
+  $("label input[type=text]  ").each(function() { this.value = '' });
+}
+function enfocar1()
+{ 
+//Coloca el cursor en los input
+const $btnEnfocar2 = document.querySelector("#bot2"),
+$nom6 = document.querySelector("#city");
 
 // En el click, enfocar
-$btnEnfocar.addEventListener("click", () => {
-	$nombre.focus();
+$btnEnfocar2.addEventListener("click", () => {
+$nom6.focus();
 });
-   
+
 }
-//api
 function clima() {
     let ciudad = $("input")[0].value;
   
@@ -54,20 +72,4 @@ function clima() {
     enfocar1();
   });
 
-  function resetinp() {
-    //Limpia los campos 
-   
-    $("label input[type=text]  ").each(function() { this.value = '' });
-}
-function enfocar1()
-{ 
-//Coloca el cursor en los input
-const $btnEnfocar2 = document.querySelector("#bot2"),
-$nom6 = document.querySelector("#city");
-
-// En el click, enfocar
-$btnEnfocar2.addEventListener("click", () => {
-$nom6.focus();
-});
-
-}
+  
