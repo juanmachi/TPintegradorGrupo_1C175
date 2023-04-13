@@ -7,53 +7,73 @@
     <title>Grupo 1-Comición 175</title>
     <link rel="stylesheet" href="estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+        crossorigin="anonymous"></script>
 </head>
-
     <body>
-        <header>    
+        <header>
             <nav class="navbar bg-dark" data-bs-theme="dark">
                 <div>
-                    <a href="index.html"><img src="images/logo.jpg" style="width: 120px;" alt="logo"></a>
+                    <a href="index.html"><img src="images/logo.jpg" alt="logo"></a>
                     <a class="navbar-brand" href="quienesSomos.html">Quienes somos</a>
-                    <a class="navbar-brand" href="nuestroEquipo.html"> Nuestro equipo</a>
+                    <a class="navbar-brand" href="#"> Nuestro equipo</a>
                     <a class="navbar-brand" href="formulario.html">Contactanos</a>
                 </div>
-                <div class="contenedor">
-                    <div class="row"> 
-                    <div class="col-md-6 ">
-                        <h3>Api del Clima</h3>
-                        <label id="letra" >Ciudad:
-                            <input id="city" type="text" />
-                          </label>                      
-                          <button id="bot2">Enviar</button>                    
-                          
-                    </div>
-                    <div class="col-md-6 ">
-                        <div class="contain">
-                            <div id="ciudad" ></div>
-                            <div id="grados"></div>
-                            <img id="imgIco" src="" alt="" />
-                            <div id="clima"></div>      
-                          </div>
-                      
-                    </div>                   
-                </div>
-            </div>
             </nav>
-            
         </header>
 
         <main>
-            <div class="bg-dark" data-bs-theme="dark">
-                    <div class="row"> <!--align-items-center si quiero alinear todo o align-self-center si quiero alinear lineas individuales -->
-                    <div class="col-md-6 offset-1 align-self-center"><h1>Bienvenidos a nuestro sitio Web</h1><br>
-                                        <h2>Creadores de contenido</h2></div>
-                    <div class="col-md-4"><img src="images/Computación.webp" alt=""></div>                   
+            <div class="fondo">
+                <div class="container " style="font-size: 20px;">
+                    <h1>Nuestro equipo</h1>
+                    <div class="col-6 ms-auto">               
+                        <img class="fotonos" src="images/fotoJMQ.jpg" alt="JMQ">
+                        <p>Juan Manuel Quiñonez</p>
+                        <p>Tecnico programador, IT Manager, mantenimiento de equipos informaticos y 
+                            administrador de redes y telefonia en Colegio de La Sierra de la ciudad
+                            de Tandil.
+                            Estudiante de Argentina Programa 4.0 del curso diseño Web.
+                            Actualmente se encuentra realizando el trabajo practico integrador, 
+                            correspondiente al grupo 1 de la comision 175.</p>               
+                    </div>
+
+                    <div class="col-4 me-auto">
+                        <img class="fotonos" src="images/vani.jpg" alt="VMH">
+                        <p>Vanina Maria Herrera</p>
+                        <p>Programador Universitario, Preceptor, Auxiliar en Corte-Confeccion y Labores y Auxiliar en Industria de la Alimentacion.
+                            Estudiante del Programa Argentina Programa 4.0 y Administracion Contablea</p>
+                    </div>
                 </div>
-            </div>
+                <div class="container" style="font-size: 20px;">
+                    
+                    <div class="col-6 ms-auto">               
+                        <img class="fotonos" src="images/persona.jpg" alt="">
+                        <p>Nombre y apellido</p>
+                        <p>aca va nuestra historia</p>           
+                    </div>
+
+                    <div class="col-4 me-auto">
+                        <img class="fotonos" src="images/persona.jpg" alt="">
+                        <p>Nombre y apellido</p>
+                        <p>aca va nuestra historia</p>
+                    </div>
+                </div>
+                <div class="container" style="font-size: 20px;">
+                    
+                    <div class="col-6 ms-auto">               
+                        <img class="fotonos" src="images/persona.jpg" alt="">
+                        <p>Nombre y apellido</p>
+                        <p>aca va nuestra historia</p>           
+                    </div>
+
+                    <div class="col-4 me-auto">
+                        
+                    </div>
+                </div>
+            </div>    
         </main>
-       
-          <footer>
+        
+        <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-2"><img src="images/logo.jpg" alt="" style="width: 50px;"> Inicio</div>
@@ -77,10 +97,7 @@
             </div>   
         </footer>
         
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-
-     
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-        <script src="app.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>    
     </body>
 </html>
