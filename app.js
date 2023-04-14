@@ -26,17 +26,41 @@ function imprimir() {
     resetform();
     enfocar();
 }
-   
-   
-//api de clima
+ //validacion antes de llamar api delclima
+
+  
+// Esta función validará Nombre de la ciudad.
+function allLetter()
+{ 
+var unom = document.getElementById("city")
+var letras = /^[\sA-Za-z]+$/;
+//const  espacio=/^ \s+$/;
+console.log(unom.value);
+if (unom.value.match(letras))
+{ //console.log("entro");
+  //alert('ciudad ingresada correctamente');
+
+    
+return true;
+}
+else
+{ 
+ alert('La ciudad solo debe tener solo caracteres alfabéticos');
+ resetinp();
+ enfocar1();
+return false;
+}
+}
+//funciones que limpia el input y coloca el foco
 function resetinp() {
-  //Limpia los campos 
+  //Limpia el campo
  
-  $("label input[type=text]  ").each(function() { this.value = '' });
+ $("label input[type=text]  ").each(function() { this.value = '' });
+// $("label input[type=text]  ").value = '';
 }
 function enfocar1()
 { 
-//Coloca el cursor en los input
+//Coloca el cursor en el input
 const $btnEnfocar2 = document.querySelector("#bot2"),
 $nom6 = document.querySelector("#city");
 
@@ -46,6 +70,8 @@ $nom6.focus();
 });
 
 }
+   
+//api de clima
 function clima() {
     let ciudad = $("input")[0].value;
   
@@ -67,9 +93,10 @@ function clima() {
   }
   
   document.querySelector("button").addEventListener("click", function () {
+   
     clima();
     resetinp();
     enfocar1();
   });
 
-  
+ 

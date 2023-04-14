@@ -22,18 +22,19 @@
                     <div class="row"> 
                     <div class="col-md-6 ">
                         <h3>Api del Clima</h3>
-                        <label id="letra" >Ciudad:
-                            <input id="city" type="text" />
+                        <label id="letra" for="city"  >Ingrese Ciudad:
+                            <input id="city" name="city" type="text"onblur="allLetter()"  /><!--onblur="allLetter()"-->
                           </label>                      
                           <button id="bot2">Enviar</button>                    
                           
                     </div>
                     <div class="col-md-6 ">
                         <div class="contain">
+                            <h6>La temperatura de la Ciudad : </h6>
                             <div id="ciudad" ></div>
                             <div id="grados"></div>
                             <img id="imgIco" src="" alt="" />
-                            <div id="clima"></div>      
+                            <div id="clima" ></div>      
                           </div>
                       
                     </div>                   
