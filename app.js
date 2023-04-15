@@ -15,6 +15,8 @@ $nombre.focus();
 });
 
 }
+
+//datos del formulario que imprime en consola
 function imprimir() {
     var nombre = document.getElementById("nombre").value;
     var email = document.getElementById("email").value;
