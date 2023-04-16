@@ -11,41 +11,50 @@
 
     <body>
         <header>    
-            <nav class="navbar bg-dark" data-bs-theme="dark">
+            <nav class="navbar bg-dark fondoIndex" data-bs-theme="dark">
                 <div>
-                    <a href="index.html"><img src="images/logo.jpg" style="width: 120px;" alt="logo"></a>
+                    <a href="index.html"><img src="images/U.svg" style="width: 130px;" alt="logo"></a>
                     <a class="navbar-brand" href="quienesSomos.html">Quienes somos</a>
                     <a class="navbar-brand" href="nuestroEquipo.html"> Nuestro equipo</a>
                     <a class="navbar-brand" href="formulario.html">Contactanos</a>
                 </div>
                 <div class="contenedor">
                     <div class="row"> 
-                    <div class="col-md-6 ">
-                        <h3>Api del Clima</h3>
-                        <label id="letra" for="city"  >Ingrese Ciudad:
-                            <input id="city" name="city" type="text"onblur="allLetter()"  /><!--onblur="allLetter()"-->
-                          </label>                      
-                          <button id="bot2">Enviar</button>
-                          
+                        <div class="col-md-6 ">
+                            <h3>Api del Clima</h3>
+                            <label id="letra" for="city"  >Ingrese Ciudad:
+                                <input id="city" name="city" type="text"onblur="allLetter()"/> <!--onblur="allLetter()"-->
+                            </label>
+                            <button id="bot2">Enviar</button>                         
+                        </div>
+
+                        <div class="col-md-6 ">
+                            <div class="contain">
+                                <h6>La temperatura de la Ciudad : </h6>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div id="ciudad"></div>
+                                                <div id="grados"></div>
+                                            </div>
+                                            <div class="col">                                        
+                                                <img id="imgIco" src="" alt=""/>
+                                            </div>
+                                            <div class="col">
+                                                <div id="clima"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>                     
+                        </div>                   
                     </div>
-                    <div class="col-md-6 ">
-                        <div class="contain">
-                            <h6>La temperatura de la Ciudad : </h6>
-                            <div id="ciudad" ></div>
-                            <div id="grados"></div>
-                            <img id="imgIco" src="" alt="" />
-                            <div id="clima" ></div>      
-                          </div>
-                      
-                    </div>                   
                 </div>
-            </div>
             </nav>
             
         </header>
 
         <main>
-            <div class="bg-dark" data-bs-theme="dark">
+            <div class="bg-dark fondoIndex" data-bs-theme="dark">
                     <div class="row"> <!--align-items-center si quiero alinear todo o align-self-center si quiero alinear lineas individuales -->
                     <div class="col-md-6 offset-1 align-self-center"><h1>Bienvenidos a nuestro sitio Web</h1><br>
                                         <h2>Creadores de contenido</h2></div>
@@ -57,7 +66,7 @@
           <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-2"><img src="images/logo.jpg" alt="" style="width: 50px;"> Inicio</div>
+                    <div class="col-2"><a href="index.html"><img src="images/U.svg" alt="" style="width: 70px;">Inicio</a></div>
                     <div class="col-4 offset-4">©2023 Todos los derechos reservados. Términos y condiciones.Aviso de privacidad</div>
                     <div class="col-2">
                         <div>

@@ -25,8 +25,9 @@ function imprimir() {
     console.log("Nombre: " + nombre);
     console.log("email: " + email);
     console.log("comentario: " + comentario);
+    alert ("Sus datos se enviaron correctamente")
     resetform();
-    enfocar();
+
 }
  //validacion antes de llamar api delclima
 
@@ -38,7 +39,7 @@ var unom = document.getElementById("city")
 var letras = /^[\sA-Za-z]+$/;
 //const  espacio=/^ \s+$/;
 console.log(unom.value);
-if (unom.value.match(letras))
+if (unom.value.match(letras) || unom.value === "")
 { //console.log("entro");
   //alert('ciudad ingresada correctamente');
 
@@ -85,8 +86,7 @@ function clima() {
         console.log(data);
   
         document.getElementById("ciudad").textContent = data.name;
-        document.getElementById("grados").textContent =
-          "Grados: " + parseInt(data.main.temp - 273.15);
+        document.getElementById("grados").textContent = parseInt(data.main.temp - 273.15) +" º";
         document.getElementById("imgIco").setAttribute( "src",  `https://openweathermap.org/img/wn/${data.weather[0].icon}.png` );
         document.getElementById("clima").textContent = data.weather[0].description ;
       }
