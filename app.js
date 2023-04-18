@@ -75,7 +75,9 @@ $nom6.focus();
 }
    
 //api de clima
+$(document).ready(function(){
 function clima() {
+    // let ciudad= document.getElementById("city").value;   otra forma difrente de tomar el valor de la ciudad ingresada
     let ciudad = $("input")[0].value;
   
     $.getJSON(
@@ -101,4 +103,4 @@ function clima() {
     enfocar1();
   });
 
- 
+})
