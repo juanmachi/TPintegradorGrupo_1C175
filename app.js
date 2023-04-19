@@ -25,7 +25,7 @@ function imprimir() {
     console.log("Nombre: " + nombre);
     console.log("email: " + email);
     console.log("comentario: " + comentario);
-    //alert('Los datos se enviaron correctamente');
+    alert('Los datos se enviaron correctamente');
     resetform();
     enfocar();
 }
