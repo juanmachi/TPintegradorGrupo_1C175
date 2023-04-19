@@ -25,9 +25,9 @@ function imprimir() {
     console.log("Nombre: " + nombre);
     console.log("email: " + email);
     console.log("comentario: " + comentario);
-    alert('Los datos se enviaron correctamente');
+    alert ("Sus datos se enviaron correctamente")
     resetform();
-    enfocar();
+
 }
  //validacion antes de llamar api delclima
 
@@ -39,7 +39,7 @@ var unom = document.getElementById("city")
 var letras = /^[\sA-Za-z]+$/;
 //const  espacio=/^ \s+$/;
 console.log(unom.value);
-if (unom.value.match(letras))
+if (unom.value.match(letras) || unom.value === "")
 { //console.log("entro");
   //alert('ciudad ingresada correctamente');
 
@@ -75,19 +75,18 @@ $nom6.focus();
 }
    
 //api de clima
+$(document).ready(function(){
 function clima() {
+    // let ciudad= document.getElementById("city").value;   otra forma difrente de tomar el valor de la ciudad ingresada
     let ciudad = $("input")[0].value;
   
     $.getJSON(
-      "https://api.openweathermap.org/data/2.5/weather?lang=es&q=" +
-        ciudad +
-        "&appid=dcec7df661b1e6b0edab51d796b7339c",
+      "https://api.openweathermap.org/data/2.5/weather?lang=es&q=" + ciudad + "&appid=dcec7df661b1e6b0edab51d796b7339c",
       function (data) {
         console.log(data);
   
         document.getElementById("ciudad").textContent = data.name;
-        document.getElementById("grados").textContent =
-          "Grados: " + parseInt(data.main.temp - 273.15);
+        document.getElementById("grados").textContent = parseInt(data.main.temp - 273.15) +" º";
         document.getElementById("imgIco").setAttribute( "src",  `https://openweathermap.org/img/wn/${data.weather[0].icon}.png` );
         document.getElementById("clima").textContent = data.weather[0].description ;
       }
@@ -102,4 +101,4 @@ function clima() {
     enfocar1();
   });
 
- 
+})
