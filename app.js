@@ -26,6 +26,16 @@ function imprimir() {
     console.log("email: " + email);
     console.log("comentario: " + comentario);
     alert ("Sus datos se enviaron correctamente")
+    const nextBtn = document.querySelector("#next-btn");
+    const backBtn = document.querySelector("#back-btn");
+    const step1 = document.querySelector("#step-1");
+    const step2 = document.querySelector("#step-2");
+    const summary = document.querySelector("#summary");
+    summary.innerHTML = `Nombre: ${nombre}<br>Email: ${email}<br>Comentario: ${comentario}`;
+      
+      // ocultar el primer paso y mostrar el segundo paso
+      step1.style.display = "none";
+      step2.style.display = "block";
     resetform();
 
 }
