@@ -15,6 +15,8 @@ $nombre.focus();
 });
 
 }
+
+//datos del formulario que imprime en consola
 function imprimir() {
     var nombre = document.getElementById("nombre").value;
     var email = document.getElementById("email").value;
@@ -23,20 +25,55 @@ function imprimir() {
     console.log("Nombre: " + nombre);
     console.log("email: " + email);
     console.log("comentario: " + comentario);
+    alert ("Sus datos se enviaron correctamente")
+    const nextBtn = document.querySelector("#next-btn");
+    const backBtn = document.querySelector("#back-btn");
+    const step1 = document.querySelector("#step-1");
+    const step2 = document.querySelector("#step-2");
+    const summary = document.querySelector("#summary");
+    summary.innerHTML = `Nombre: ${nombre}<br>Email: ${email}<br>Comentario: ${comentario}`;
+      
+      // ocultar el primer paso y mostrar el segundo paso
+      step1.style.display = "none";
+      step2.style.display = "block";
     resetform();
-    enfocar();
+
 }
-   
-   
-//api de clima
+ //validacion antes de llamar api delclima
+
+  
+// Esta función validará Nombre de la ciudad.
+function allLetter()
+{ 
+var unom = document.getElementById("city")
+var letras = /^[\sA-Za-z]+$/;
+//const  espacio=/^ \s+$/;
+console.log(unom.value);
+if (unom.value.match(letras) || unom.value === "")
+{ //console.log("entro");
+  //alert('ciudad ingresada correctamente');
+
+    
+return true;
+}
+else
+{ 
+ alert('La ciudad solo debe tener solo caracteres alfabéticos');
+ resetinp();
+ enfocar1();
+return false;
+}
+}
+//funciones que limpia el input y coloca el foco
 function resetinp() {
-  //Limpia los campos 
+  //Limpia el campo
  
-  $("label input[type=text]  ").each(function() { this.value = '' });
+ $("label input[type=text]  ").each(function() { this.value = '' });
+// $("label input[type=text]  ").value = '';
 }
 function enfocar1()
 { 
-//Coloca el cursor en los input
+//Coloca el cursor en el input
 const $btnEnfocar2 = document.querySelector("#bot2"),
 $nom6 = document.querySelector("#city");
 
@@ -46,19 +83,20 @@ $nom6.focus();
 });
 
 }
+   
+//api de clima
+$(document).ready(function(){
 function clima() {
+    // let ciudad= document.getElementById("city").value;   otra forma difrente de tomar el valor de la ciudad ingresada
     let ciudad = $("input")[0].value;
   
     $.getJSON(
-      "https://api.openweathermap.org/data/2.5/weather?lang=es&q=" +
-        ciudad +
-        "&appid=dcec7df661b1e6b0edab51d796b7339c",
+      "https://api.openweathermap.org/data/2.5/weather?lang=es&q=" + ciudad + "&appid=dcec7df661b1e6b0edab51d796b7339c",
       function (data) {
         console.log(data);
   
         document.getElementById("ciudad").textContent = data.name;
-        document.getElementById("grados").textContent =
-          "Grados: " + parseInt(data.main.temp - 273.15);
+        document.getElementById("grados").textContent = parseInt(data.main.temp - 273.15) +" º";
         document.getElementById("imgIco").setAttribute( "src",  `https://openweathermap.org/img/wn/${data.weather[0].icon}.png` );
         document.getElementById("clima").textContent = data.weather[0].description ;
       }
@@ -67,9 +105,10 @@ function clima() {
   }
   
   document.querySelector("button").addEventListener("click", function () {
+   
     clima();
     resetinp();
     enfocar1();
   });
 
-  
+})
